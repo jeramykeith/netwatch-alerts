@@ -3,27 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NetWatch Alerts</title>
+<title>HomeLab NetWatch Alerts</title>
 <style>
-  :root{--bg:#fff;--text:#1d1d1f;--muted:#5f6368;--link:#0b57d0}
-  @media (prefers-color-scheme:dark){:root{--bg:#141416;--text:#ececef;--muted:#a1a1a8;--link:#8ab4f8}}
+  :root{--bg:#fff;--text:#1d1d1f;--muted:#5f6368;--line:#e3e3e6;--link:#0b57d0;--panel:#f6f6f8}
+  @media (prefers-color-scheme:dark){:root{--bg:#141416;--text:#ececef;--muted:#a1a1a8;--line:#2c2c30;--link:#8ab4f8;--panel:#1c1c20}}
   body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
   main{max-width:720px;margin:0 auto;padding:40px 16px 64px}
-  h1{font-size:1.75rem;margin:0 0 8px}
-  a{color:var(--link)}
+  h1{font-size:1.75rem;line-height:1.25;margin:0 0 4px}
+  h2{font-size:1.125rem;margin:32px 0 8px}
+  p,li{margin:0 0 10px}
   .muted{color:var(--muted)}
+  a{color:var(--link)}
+  .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}
+  figure{margin:0}
+  figure img{display:block;max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px}
+  figcaption{margin-top:8px;font-size:.875rem;color:var(--muted)}
+  blockquote{margin:12px 0;padding:12px 16px;background:var(--panel);border-left:3px solid var(--line);border-radius:4px}
+  blockquote p:last-child{margin-bottom:0}
+  footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:.875rem;color:var(--muted)}
 </style>
 </head>
 <body>
 <main>
-  <h1>NetWatch Alerts</h1>
-  <p class="muted">Text-message alerts about one household's home network, sent only to that household's account owner. Program operated by HomeLab (sole proprietor).</p>
+  <h1>HomeLab NetWatch Alerts</h1>
+  <p class="muted">Automated text-message alerts from NetWatch, the home-network monitoring and parental-control software operated by HomeLab (sole proprietor).</p>
+
+  <h2>What the program does</h2>
+  <p>NetWatch runs on a small server on the home network it monitors. <strong>HomeLab NetWatch Alerts</strong> is its text-message program: the software sends an alert to the account owner's mobile number when something on that network needs attention. Every message is generated and sent by the software in response to a network event.</p>
   <ul>
-    <li><a href="opt-in.html">How Opt-In Works</a></li>
+    <li>A managed profile asks for more internet time. The account owner can reply <strong>YES</strong> (15 more minutes), <strong>YES</strong> followed by a number of minutes, or <strong>NO</strong>, and gets one text confirming the answer.</li>
+    <li>A managed profile reaches its daily time limit.</li>
+    <li>A website is blocked by a rule or filter, a watched website is visited, or an app is used for the first time.</li>
+    <li>An optional evening summary of time online for each managed profile.</li>
+  </ul>
+
+  <h2>Program details</h2>
+  <ul>
+    <li><a href="opt-in.html">How Opt-In Works</a>, with the opt-in form before and after opt-in</li>
     <li><a href="privacy.html">Privacy Policy</a></li>
     <li><a href="terms.html">Terms and Conditions</a></li>
   </ul>
-  <p>Reply <strong>STOP</strong> to opt out, <strong>HELP</strong> for help. Message and data rates may apply.</p>
+  <p>Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to opt out, <strong>HELP</strong> for help.</p>
+
+  <h2 id="help">Help and support</h2>
+  <ul>
+    <li><strong>Stop the texts:</strong> reply <strong>STOP</strong> to any message, or turn off <strong>Alerts by text</strong> in the NetWatch dashboard under Family &gt; Alerts &gt; On your phone.</li>
+    <li><strong>Start them again:</strong> text <strong>START</strong> to +1 (424) 433-6193.</li>
+    <li><strong>Change the number or the kinds of alerts:</strong> use the same dashboard screen.</li>
+    <li><strong>Anything else:</strong> text <strong>HELP</strong> to +1 (424) 433-6193.</li>
+  </ul>
+  <p>Messages come from +1 (424) 433-6193.</p>
 </main>
 </body>
 </html>

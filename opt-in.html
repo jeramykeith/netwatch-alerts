@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NetWatch Alerts – How Opt-In Works</title>
+<title>HomeLab NetWatch Alerts – How Opt-In Works</title>
 <style>
   :root{--bg:#fff;--text:#1d1d1f;--muted:#5f6368;--line:#e3e3e6;--link:#0b57d0;--panel:#f6f6f8}
   @media (prefers-color-scheme:dark){:root{--bg:#141416;--text:#ececef;--muted:#a1a1a8;--line:#2c2c30;--link:#8ab4f8;--panel:#1c1c20}}
@@ -14,7 +14,8 @@
   p,li{margin:0 0 10px}
   .muted{color:var(--muted)}
   a{color:var(--link)}
-  figure{margin:16px 0 0}
+  .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}
+  figure{margin:0}
   figure img{display:block;max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px}
   figcaption{margin-top:8px;font-size:.875rem;color:var(--muted)}
   blockquote{margin:12px 0;padding:12px 16px;background:var(--panel);border-left:3px solid var(--line);border-radius:4px}
@@ -24,43 +25,58 @@
 </head>
 <body>
 <main>
-  <h1>NetWatch Alerts – How Opt-In Works</h1>
-  <p class="muted">Effective November 12, 2026 · Program operated by HomeLab, a household (sole proprietor)</p>
+  <h1>HomeLab NetWatch Alerts – How Opt-In Works</h1>
+  <p class="muted">Effective November 14, 2026 · Program operated by HomeLab (sole proprietor)</p>
 
   <h2>Why this page exists</h2>
-  <p>NetWatch is a private home-network monitor for one household. Its dashboard runs on a computer inside the home and cannot be reached from the internet, so the opt-in screen cannot be visited directly. This page shows that screen and the consent wording on it.</p>
+  <p>The opt-in form is inside the NetWatch dashboard. The dashboard requires sign-in and is reachable only on the home network it monitors, so the form cannot be opened from the internet. This page shows that form before and after opt-in, with the consent wording on it.</p>
 
-  <h2>Who can opt in</h2>
-  <p>Only the household's account owner. The program is not offered to the public, there is no public sign-up form, and no phone numbers are bought, imported or collected from anyone else.</p>
+  <h2>Who opts in</h2>
+  <p>The NetWatch account owner, by entering their own mobile number in the dashboard. Opt-in happens only in that form. There is no public sign-up form, and phone numbers are never bought, imported or collected any other way. Opting in is not required to use any other part of NetWatch.</p>
 
   <h2>How the account owner opts in</h2>
   <ol>
-    <li>The owner signs in to the NetWatch dashboard at home and opens <strong>Family &gt; Alerts &gt; On your phone</strong>.</li>
-    <li>The owner chooses <strong>SMS (Twilio)</strong>, types their own mobile number into the <strong>Text to</strong> field and presses <strong>Save</strong>. NetWatch sends one confirmation text to that number.</li>
-    <li>The owner reads the consent wording shown between the number field and the <strong>Alerts by text</strong> switch, and turns the switch on. The switch is off by default, and turning it on is not required to use any other part of NetWatch.</li>
+    <li>The account owner signs in to the NetWatch dashboard and opens <strong>Family &gt; Alerts &gt; On your phone</strong>.</li>
+    <li>They choose <strong>SMS (Twilio)</strong>, type their mobile number into the <strong>Text to</strong> field and press <strong>Save</strong>. NetWatch sends one confirmation text to that number.</li>
+    <li>They read the consent wording shown between the number field and the <strong>Alerts by text</strong> switch, and turn the switch on. The switch is off by default.</li>
   </ol>
 
-  <h2>The opt-in screen</h2>
-  <figure>
-    <img src="opt-in-screenshot.png" width="419" height="798" alt="Screenshot of the NetWatch settings panel titled On your phone, with SMS (Twilio) selected. It shows an empty Text to field for a mobile number with a Save button, the consent wording quoted below, and the Alerts by text switch in the off position.">
-    <figcaption>NetWatch dashboard, Family &gt; Alerts &gt; On your phone, before a number is saved and before alerts are switched on.</figcaption>
-  </figure>
+  <h2>The opt-in form, before and after</h2>
+  <div class="shots">
+    <figure>
+      <img src="opt-in-1-before.png" width="420" height="1000" alt="NetWatch dashboard panel titled On your phone, with SMS (Twilio) selected. The Text to field for a mobile number is empty, with a Save button. Below it is the consent wording quoted on this page, with links to the Terms and Conditions and Privacy Policy. The Alerts by text switch is off.">
+      <figcaption>Before opt-in: the number field is empty and <strong>Alerts by text</strong> is off (the default).</figcaption>
+    </figure>
+    <figure>
+      <img src="opt-in-2-after.png" width="420" height="1000" alt="The same panel after opt-in. The Text to field holds the saved number +15551234567, the Alerts by text switch is on, and a line reads 1 waiting to send, which is the confirmation text.">
+      <figcaption>After opt-in: the number is saved, <strong>Alerts by text</strong> is on, and the confirmation text is waiting to send. The number shown is a placeholder.</figcaption>
+    </figure>
+  </div>
 
-  <h2>Consent wording shown on that screen</h2>
+  <h2>Consent wording shown on the form</h2>
   <blockquote>
-    <p>By saving your mobile number and turning on <strong>Alerts by text</strong>, you agree to receive NetWatch Alerts text messages about your home network at this number. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out. See the <a href="terms.html">Terms and Conditions</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+    <p>By saving your mobile number and turning on <strong>Alerts by text</strong>, you agree to receive HomeLab NetWatch Alerts text messages about your home network at this number. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out. See the <a href="terms.html">Terms and Conditions</a> and <a href="privacy.html">Privacy Policy</a>.</p>
   </blockquote>
 
   <h2>Confirmation text sent after opting in</h2>
   <blockquote>
-    <p>NetWatch: alerts for your home network will come to this number. Msg frequency varies. Msg &amp; data rates may apply. Reply HELP for help, STOP to opt out.</p>
+    <p>HomeLab NetWatch Alerts: you are opted in to alerts about your home network at this number. Msg frequency varies. Msg &amp; data rates may apply. Reply HELP for help, STOP to opt out.</p>
   </blockquote>
 
-  <h2>Opting out</h2>
-  <p>Reply <strong>STOP</strong> to any message, or turn the same switch off in the dashboard. Reply <strong>HELP</strong> for help, or text HELP to +1 (424) 433-6193.</p>
+  <h2>What messages follow</h2>
+  <ul>
+    <li>A managed profile asks for more internet time. The account owner can reply <strong>YES</strong> (15 more minutes), <strong>YES</strong> followed by a number of minutes, or <strong>NO</strong>, and gets one text confirming the answer.</li>
+    <li>A managed profile reaches its daily time limit.</li>
+    <li>A website is blocked by a rule or filter, a watched website is visited, or an app is used for the first time.</li>
+    <li>An optional evening summary of time online for each managed profile.</li>
+  </ul>
+  <p>Message frequency varies with activity on the home network. Requests for more time arrive right away; other alerts are bundled into at most one text every 10 minutes.</p>
+
+  <h2>Opting out and help</h2>
+  <p>Reply <strong>STOP</strong> to any message, or turn the same switch off in the dashboard. Reply <strong>HELP</strong> for help, or text HELP to +1 (424) 433-6193. See also <a href="index.html#help">Help and support</a>.</p>
 
   <h2>Sharing</h2>
-  <p><strong>Mobile numbers and SMS opt-in information are never sold, rented or shared with third parties or affiliates for marketing or promotional purposes.</strong></p>
+  <p><strong>We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes.</strong></p>
 
   <footer>See also the <a href="terms.html">Terms and Conditions</a> and <a href="privacy.html">Privacy Policy</a>.</footer>
 </main>
